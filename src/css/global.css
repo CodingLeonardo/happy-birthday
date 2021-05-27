@@ -3,3 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #222;
+}
+
+.container {
+  width: 70%;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  margin: 0 auto;
+}

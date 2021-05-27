@@ -1,0 +1,52 @@
+.Count {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.Count .mask,
+.Count .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.Count .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.Count .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #4aa5fa;
+}
+
+.Count .mask.full,
+.Count .fill {
+  transform: rotate(180deg);
+}
+
+.Count-inside {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #222;
+  color: white;
+  text-align: center;
+  margin: 15px;
+  padding-top: 25px;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}
