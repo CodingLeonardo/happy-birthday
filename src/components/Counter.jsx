@@ -19,10 +19,18 @@ const Counter = ({ date }) => {
           days: currenTime.days,
           hours: currenTime.hours,
           minutes: currenTime.minutes,
-          seconds: currenTime.seconds
+          seconds: currenTime.seconds,
+          time: currenTime.time
         })
 
         if (currenTime.time <= 1) {
+            setTimeLeft({
+              days: 0,
+              hours: 0,
+              minutes: 0,
+              seconds: 0,
+              time: 0
+            })
             clearInterval(timerUpdate);
         }
 
@@ -40,7 +48,7 @@ const Counter = ({ date }) => {
           <Count name="Minutes" count={timeLeft.minutes} />
           <Count name="Seconds" count={timeLeft.seconds} />
         </div>
-        {timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0 &&
+        {timeLeft.time <= 1 &&
         <div className="Counter-happyBirthday">
           <div className="container">
             <h1>😎 happy Birthday!</h1>
