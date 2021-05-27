@@ -1,0 +1,132 @@
+.Count {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.Count .mask,
+.Count .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.Count .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.Count .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #4aa5fa;
+}
+
+.Count .mask.full,
+.Count .fill {
+  transform: rotate(180deg);
+}
+
+.Count-inside {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #222;
+  color: white;
+  text-align: center;
+  margin: 15px;
+  padding-top: 25px;
+  position: absolute;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}
+
+.Counter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Counter-happyBirthday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 3em;
+  animation: animation 2s ease-in-out forwards;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.App-title {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.App-title h1 {
+  color: white;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+.App-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 3em auto;
+  color: white;
+  border: 2px solid white;
+  padding: 1em;
+  border-radius: 0.2em;
+}
+
+.App-date span {
+  margin: 0 0.8em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #222;
+}
+
+.container {
+  width: 70%;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  margin: 0 auto;
+}
+
